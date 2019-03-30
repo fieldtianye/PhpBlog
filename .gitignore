@@ -3,3 +3,4 @@ git add README.md/vendor
 Homestead.json
 Homestead.yaml
 .env
+*.lock
