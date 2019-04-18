@@ -80,3 +80,15 @@ $stringBody = (string)$body;
 echo $stringBody, "\n";
 $map = json_decode($stringBody, true);
 var_dump($map["valid"]);
+
+var_dump(date('Y-m-d H:i:s',time()));
+
+// 0, '0', null is false, other is true
+$tmp = 0;
+if ($tmp)
+    echo "true\n\n";
+else
+    echo "false\n\n";
+
+
+echo json_encode(["data" => ["data" => [1,2,3,4,5], "total_number" => 100]]);
