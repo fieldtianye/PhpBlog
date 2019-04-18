@@ -59,36 +59,3 @@ class my_example
 //$myEx->print_info();
 //echo str_repeat("=", 50), "\n";
 //my_example::print_info();       // not call __construct() and __destruct()
-
-include "vendor/autoload.php";
-
-// TODO 检查一下消息是否命中spam关键字并且需要过滤或者替换
-$client = new \GuzzleHttp\Client(['base_uri' => 'http://39.96.206.29:9005']);
-$text = '{"body": { "text": "辅导辅导费习近平"}}';
-$response = $client->request("POST", "/search", ['body' => $text]);
-$body = $response->getBody();
-// Implicitly cast the body to a string and echo it
-echo $body, "\n";
-
-// Read 10 bytes from the body
-// $tenBytes = $body->read(10);
-// Read the remaining contents of the body as a string
-// $remainingBytes = $body->getContents();
-
-// Explicitly cast the body to a string
-$stringBody = (string)$body;
-echo $stringBody, "\n";
-$map = json_decode($stringBody, true);
-var_dump($map["valid"]);
-
-var_dump(date('Y-m-d H:i:s',time()));
-
-// 0, '0', null is false, other is true
-$tmp = 0;
-if ($tmp)
-    echo "true\n\n";
-else
-    echo "false\n\n";
-
-
-echo json_encode(["data" => ["data" => [1,2,3,4,5], "total_number" => 100]]);
