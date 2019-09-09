@@ -8,8 +8,8 @@
 
 var_dump(date('Y-m-d H:i:s',time()));
 
-// 0, '0', null is false, other is true
-$tmp = 0;
+// 0, '0', '', null, false, [] is false, other is true
+$tmp = [];
 if ($tmp)
     echo "true\n\n";
 else
