@@ -15,7 +15,6 @@ if ($tmp)
 else
     echo "false\n\n";
 
-echo json_encode(["data" => ["data" => [1,2,3,4,5], "total_number" => 100]]);
 
 $obj = ["data" => 100];
 echo "\ndata =====> ", $obj['data'];
@@ -31,3 +30,7 @@ echo "\nnew my =====> ", $my->data;
 
 $operator_list = [1,2,3,4,5,6,7,8,9];
 echo "\noperator_list =====> ", implode($operator_list, "','");
+
+
+
+echo number_format(2888 / 41917792, 10, '.', '');

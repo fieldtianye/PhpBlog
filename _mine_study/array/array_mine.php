@@ -6,7 +6,7 @@
  * Time: 下午3:09
  */
 
-require_once '_common.php';
+require_once '../_common.php';
 
 // TODO 数组转字符串
 $userList = [123, 456, 789];
